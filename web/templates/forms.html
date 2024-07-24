@@ -1,0 +1,10 @@
+{{if .Success}}
+<h1> {{ .FileId }}</h1>
+{{else}}
+<h1>Upload</h1>
+<form action="/uploadfile" method="POST" enctype="multipart/form-data">
+    <label>File:</label>
+    <input type="file" name="file">
+    <input type="submit">
+</form>
+{{end}}
